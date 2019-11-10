@@ -18,8 +18,6 @@ const Content = () => {
 		ignoreLocalhost: false
 	})
 
-	console.log(location)
-
 	return (
 		<div>
 			<ul>
