@@ -22,17 +22,12 @@ const useAckee = function(pathname, server, opts = {}) {
 
 	useEffect(() => {
 
-		console.log('update')
-
 		const hasPathname = (
 			pathname != null &&
 			pathname !== ''
 		)
 
-		if (hasPathname === false) {
-			console.log('skipped')
-			return
-		}
+		if (hasPathname === false) return
 
 		const attributes = ackeeTracker.attributes(opts.detailed)
 		const url = new URL(pathname, location)
@@ -41,8 +36,6 @@ const useAckee = function(pathname, server, opts = {}) {
 			...attributes,
 			siteLocation: url.href
 		})
-
-		console.log('pathchange')
 
 	}, [ pathname ])
 
