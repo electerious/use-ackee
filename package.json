@@ -42,7 +42,8 @@
     "eslint-plugin-react-hooks": "^2.2.0",
     "eslint-plugin-react-native": "^3.8.1",
     "mocha": "^6.0.0",
-    "nyc": "^13.2.0"
+    "nyc": "^13.2.0",
+    "react": "^16.11.0"
   },
   "peerDependencies": {
     "react": "^16.11.0"
