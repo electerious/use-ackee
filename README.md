@@ -23,7 +23,7 @@ yarn add use-ackee
 Import and call `use-ackee` in a component responsible for the routing.
 
 ```js
-const [ attributes ] = useAckee('/current/path', {
+useAckee('/current/path', {
 	server: 'https://example.com',
 	domainId: 'hd11f820-68a1-11e6-8047-79c0c2d9bce0'
 }, {
