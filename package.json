@@ -37,22 +37,22 @@
     "demos"
   ],
   "devDependencies": {
-    "@electerious/eslint-config": "^1.3.1",
+    "@electerious/eslint-config": "^1.3.4",
     "chai": "^4.1.2",
-    "coveralls": "^3.0.0",
-    "eslint": "^6.6.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.2.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.2",
     "eslint-plugin-react-native": "^3.8.1",
-    "mocha": "^7.1.1",
-    "nyc": "^15.0.0",
+    "mocha": "^7.2.0",
+    "nyc": "^15.0.1",
     "react": "^16.11.0"
   },
   "peerDependencies": {
     "react": "^16.11.0"
   },
   "dependencies": {
-    "ackee-tracker": "^3.2.2"
+    "ackee-tracker": "^3.3.0"
   }
 }

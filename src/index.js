@@ -32,7 +32,7 @@ const useAckee = function(pathname, server, opts = {}) {
 		const attributes = ackeeTracker.attributes(opts.detailed)
 		const url = new URL(pathname, location)
 
-		instanceRef.current.record({
+		return instanceRef.current.record({
 			...attributes,
 			siteLocation: url.href
 		})
