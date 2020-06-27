@@ -25,6 +25,6 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "use-ackee": "^0.2.0"
+    "use-ackee": "^0.3.0"
   }
 }
