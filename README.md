@@ -18,7 +18,7 @@ yarn add use-ackee
 
 ## Usage
 
-Import and call `use-ackee` in a component responsible for the routing or inside your routes. Make use that only one `use-ackee` hook is actively rendered to avoid redundant records.
+Import and call `use-ackee` in a component responsible for the routing or inside your routes. Make sure that only one `use-ackee` hook is actively rendered to avoid redundant records.
 
 ```js
 useAckee('/current/path', {
