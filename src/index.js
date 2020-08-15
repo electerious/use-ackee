@@ -35,7 +35,7 @@ const useAckee = function(pathname, server, opts = {}) {
 		return instanceRef.current.record({
 			...attributes,
 			siteLocation: url.href
-		})
+		}).stop
 
 	}, [ pathname ])
 
