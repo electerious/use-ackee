@@ -53,6 +53,6 @@
     "react": "^16.11.0"
   },
   "dependencies": {
-    "ackee-tracker": "^3.3.0"
+    "ackee-tracker": "^4.0.0"
   }
 }
