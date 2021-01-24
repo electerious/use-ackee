@@ -10,7 +10,7 @@ Use [Ackee](https://github.com/electerious/Ackee) in React.
 npm install use-ackee
 ```
 
-or
+*or*
 
 ```
 yarn add use-ackee
@@ -25,8 +25,9 @@ useAckee('/current/path', {
 	server: 'https://example.com',
 	domainId: 'hd11f820-68a1-11e6-8047-79c0c2d9bce0'
 }, {
+	detailed: false,
 	ignoreLocalhost: true,
-	detailed: false
+	ignoreOwnVisits: true
 })
 ```
 
@@ -37,7 +38,7 @@ Ackee will create a new record every time the `pathname` changes. An undefined o
 ### Parameters
 
 - `pathname` `{?String}` Current path.
-- `server` `{Object}` An object that contains details about your [Ackee](https://github.com/electerious/Ackee) installation. The `server` property must not end with a slash.
+- `environment` `{Object}` An object that contains details about your [Ackee](https://github.com/electerious/Ackee) installation. The `server` property must not end with a slash.
 - `opts` `{?Object}` An object of [Ackee options](https://github.com/electerious/ackee-tracker#options).
 
 ## Examples
