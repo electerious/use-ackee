@@ -1,24 +1,22 @@
 'use strict'
 
-const { useRef, useEffect } = require('react')
+const { useMemo, useEffect } = require('react')
 const ackeeTracker = require('ackee-tracker')
 
 /**
  * Use Ackee in React.
  * Creates an instance once and a new record every time the pathname changes.
  * @param {?String} pathname - Current path.
- * @param {Object} server - Server details.
+ * @param {Object} environment - Object containing the URL of the Ackee server and the domain id.
  * @param {?Object} opts - Ackee options.
  */
-const useAckee = function(pathname, server, opts = {}) {
+const useAckee = function(pathname, environment, opts = {}) {
 
-	const instanceRef = useRef()
+	const instance = useMemo(() => {
 
-	useEffect(() => {
+		return ackeeTracker.create(environment.server, opts)
 
-		instanceRef.current = ackeeTracker.create(server, opts)
-
-	}, [])
+	}, [ environment.server, opts.detailed, opts.ignoreLocalhost, opts.ignoreOwnVisits ])
 
 	useEffect(() => {
 
@@ -32,12 +30,12 @@ const useAckee = function(pathname, server, opts = {}) {
 		const attributes = ackeeTracker.attributes(opts.detailed)
 		const url = new URL(pathname, location)
 
-		return instanceRef.current.record({
+		return instance.record(environment.domainId, {
 			...attributes,
 			siteLocation: url.href
 		}).stop
 
-	}, [ pathname ])
+	}, [ instance, pathname, environment.domainId ])
 
 }
 
