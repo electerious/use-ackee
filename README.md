@@ -1,6 +1,6 @@
 # use-ackee
 
-[![Travis Build Status](https://travis-ci.org/electerious/use-ackee.svg?branch=master)](https://travis-ci.org/electerious/use-ackee) [![Coverage Status](https://coveralls.io/repos/github/electerious/use-ackee/badge.svg?branch=master)](https://coveralls.io/github/electerious/use-ackee?branch=master) [![Dependencies](https://david-dm.org/electerious/use-ackee.svg)](https://david-dm.org/electerious/use-ackee#info=dependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/electerious/use-ackee.svg)](https://greenkeeper.io/)
+![Build](https://github.com/electerious/use-ackee/workflows/Build/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/electerious/use-ackee/badge.svg?branch=master)](https://coveralls.io/github/electerious/use-ackee?branch=master)
 
 Use [Ackee](https://github.com/electerious/Ackee) in React.
 
