@@ -37,7 +37,7 @@
     "demos"
   ],
   "devDependencies": {
-    "@electerious/eslint-config": "^1.4.0",
+    "@electerious/eslint-config": "^2.0.2",
     "chai": "^4.3.0",
     "coveralls": "^3.1.0",
     "eslint": "^7.20.0",
