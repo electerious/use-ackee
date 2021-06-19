@@ -26,8 +26,8 @@
   ],
   "scripts": {
     "coveralls": "nyc report --reporter=lcov",
-    "test": "nyc node_modules/mocha/bin/_mocha",
-    "lint": "eslint '{src,test}/**/*.js'"
+    "test": "npm run lint && nyc node_modules/mocha/bin/_mocha",
+    "lint": "eslint \"{src,test}/**/*.js\""
   },
   "eslintConfig": {
     "root": true,
@@ -37,14 +37,15 @@
     "demos"
   ],
   "devDependencies": {
-    "@electerious/eslint-config": "^1.4.0",
+    "@electerious/eslint-config": "^2.0.3",
     "chai": "^4.3.0",
     "coveralls": "^3.1.0",
-    "eslint": "^7.20.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint": "^7.29.0",
+    "eslint-plugin-ava": "^12.0.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-react-native": "^3.10.0",
+    "eslint-plugin-unicorn": "^33.0.1",
     "mocha": "^9.0.1",
     "nyc": "^15.1.0",
     "react": "^17.0.1"

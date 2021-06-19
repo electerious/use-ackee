@@ -8,18 +8,14 @@ const ackeeTracker = require('ackee-tracker')
  * Creates an instance once and a new record every time the pathname changes.
  * @param {?String} pathname - Current path.
  * @param {Object} environment - Object containing the URL of the Ackee server and the domain id.
- * @param {?Object} opts - Ackee options.
+ * @param {?Object} options - Ackee options.
  */
-const useAckee = function(pathname, environment, opts = {}) {
-
+const useAckee = function(pathname, environment, options = {}) {
 	const instance = useMemo(() => {
-
-		return ackeeTracker.create(environment.server, opts)
-
-	}, [ environment.server, opts.detailed, opts.ignoreLocalhost, opts.ignoreOwnVisits ])
+		return ackeeTracker.create(environment.server, options)
+	}, [ environment.server, options.detailed, options.ignoreLocalhost, options.ignoreOwnVisits ])
 
 	useEffect(() => {
-
 		const hasPathname = (
 			pathname != null &&
 			pathname !== ''
@@ -27,16 +23,14 @@ const useAckee = function(pathname, environment, opts = {}) {
 
 		if (hasPathname === false) return
 
-		const attributes = ackeeTracker.attributes(opts.detailed)
+		const attributes = ackeeTracker.attributes(options.detailed)
 		const url = new URL(pathname, location)
 
 		return instance.record(environment.domainId, {
 			...attributes,
-			siteLocation: url.href
+			siteLocation: url.href,
 		}).stop
-
 	}, [ instance, pathname, environment.domainId ])
-
 }
 
 module.exports = useAckee

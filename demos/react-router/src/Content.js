@@ -8,7 +8,6 @@ import About from './About'
 import Dashboard from './Dashboard'
 
 const Content = () => {
-
 	const location = useLocation()
 
 	useAckee(location.pathname, {
@@ -47,7 +46,6 @@ const Content = () => {
 			</Switch>
 		</div>
 	)
-
 }
 
 export default Content
