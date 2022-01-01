@@ -33,6 +33,8 @@ useAckee('/current/path', {
 
 Ackee will create a new record every time the `pathname` changes. An undefined or empty `pathname` will be skipped. Use `/` for the root instead.
 
+This hook is a no-op on the server for safe usage during server-side rendering.
+
 ## API
 
 ### Parameters
