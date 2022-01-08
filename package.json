@@ -29,23 +29,13 @@
     "test": "npm run lint && nyc node_modules/mocha/bin/_mocha",
     "lint": "eslint \"{src,test}/**/*.js\""
   },
-  "eslintConfig": {
-    "root": true,
-    "extends": "@electerious/eslint-config"
+  "dependencies": {
+    "ackee-tracker": "^5.0.1"
   },
-  "eslintIgnore": [
-    "demos"
-  ],
   "devDependencies": {
-    "@electerious/eslint-config": "^2.0.3",
+    "@electerious/eslint-config": "^3.0.0",
     "chai": "^4.3.0",
     "coveralls": "^3.1.0",
-    "eslint": "^7.29.0",
-    "eslint-plugin-ava": "^12.0.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-unicorn": "^33.0.1",
     "mocha": "^9.0.1",
     "nyc": "^15.1.0",
     "react": "^17.0.1"
@@ -53,7 +43,11 @@
   "peerDependencies": {
     "react": "^17.0.0"
   },
-  "dependencies": {
-    "ackee-tracker": "^5.0.1"
-  }
+  "eslintConfig": {
+    "root": true,
+    "extends": "@electerious/eslint-config"
+  },
+  "eslintIgnore": [
+    "demos"
+  ]
 }
