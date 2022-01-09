@@ -3,6 +3,8 @@
 const { useMemo, useEffect } = require('react')
 const ackeeTracker = require('ackee-tracker')
 
+const isBrowser = typeof window !== 'undefined'
+
 /**
  * Use Ackee in React.
  * Creates an instance once and a new record every time the pathname changes.
@@ -13,20 +15,26 @@ const ackeeTracker = require('ackee-tracker')
  */
 const useAckee = function(pathname, environment, options = {}) {
 	const instance = useMemo(() => {
-		if (typeof window === 'undefined') return null
+		if (isBrowser === false) return
 
 		return ackeeTracker.create(environment.server, options)
 	}, [ environment.server, options.detailed, options.ignoreLocalhost, options.ignoreOwnVisits ])
 
 	useEffect(() => {
-		if (!instance) return
+		if (instance == null) {
+			console.warn('Skipped record creation because useAckee has been called in a non-browser environment')
+			return
+		}
 
 		const hasPathname = (
 			pathname != null &&
 			pathname !== ''
 		)
 
-		if (hasPathname === false) return
+		if (hasPathname === false) {
+			console.warn('Skipped record creation because useAckee has been called without pathname')
+			return
+		}
 
 		const attributes = ackeeTracker.attributes(options.detailed)
 		const url = new URL(pathname, location)
