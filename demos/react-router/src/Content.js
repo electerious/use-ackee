@@ -12,9 +12,9 @@ const Content = () => {
 
 	useAckee(location.pathname, {
 		server: 'https://example.com',
-		domainId: 'hd11f820-68a1-11e6-8047-79c0c2d9bce0'
+		domainId: 'hd11f820-68a1-11e6-8047-79c0c2d9bce0',
 	}, {
-		ignoreLocalhost: false
+		ignoreLocalhost: false,
 	})
 
 	return (
