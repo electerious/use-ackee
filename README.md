@@ -45,4 +45,6 @@ This hook is a no-op on the server for safe usage during server-side rendering.
 
 ## Examples
 
-- [React Router](demos/react-router/README.md)
+- [Next.js](demos/next/)
+- [React Router](demos/react-router/)
+- [Remix](demos/remix/)
