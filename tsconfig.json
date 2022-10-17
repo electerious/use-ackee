@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "module": "ES2022",
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "allowJs": true,
+    "strict": true,
+    "declaration": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "isolatedModules": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

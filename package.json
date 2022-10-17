@@ -5,7 +5,6 @@
     "Tobias Reich <tobias@electerious.com>"
   ],
   "description": "Use Ackee in React",
-  "main": "src/index.js",
   "keywords": [
     "react",
     "hooks",
@@ -22,26 +21,31 @@
     "url": "https://github.com/electerious/use-ackee.git"
   },
   "files": [
-    "src"
+    "build"
   ],
   "scripts": {
     "coveralls": "nyc report --reporter=lcov",
-    "test": "npm run lint && nyc node_modules/mocha/bin/_mocha",
-    "lint": "eslint \"{src,test}/**/*.js\""
+    "test": "npm run build && nyc node_modules/mocha/bin/_mocha",
+    "lint": "eslint \"{build,test}/**/*.js\"",
+    "build": "tsc"
   },
   "dependencies": {
     "ackee-tracker": "^5.0.1"
   },
   "devDependencies": {
     "@electerious/eslint-config": "^3.0.0",
+    "@types/ackee-tracker": "^5.0.2",
+    "@types/node": "^18.11.0",
+    "@types/react": "^18.0.21",
     "chai": "^4.3.0",
     "coveralls": "^3.1.1",
     "mocha": "^9.1.3",
     "nyc": "^15.1.0",
-    "react": "^17.0.1"
+    "react": "^18.1.0",
+    "typescript": "^4.8.4"
   },
   "peerDependencies": {
-    "react": "^17.0.0"
+    "react": "^18.1.0"
   },
   "eslintConfig": {
     "root": true,
@@ -49,5 +53,11 @@
   },
   "eslintIgnore": [
     "demos"
-  ]
+  ],
+  "type": "module",
+  "exports": "./build/index.js",
+  "engines": {
+    "node": ">=14.16"
+  },
+  "main": "./build/index.js"
 }
