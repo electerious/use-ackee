@@ -43,6 +43,9 @@
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
+  "engines": {
+    "node": ">= 14"
+  },
   "eslintConfig": {
     "root": true,
     "extends": "@electerious/eslint-config"
