@@ -41,7 +41,7 @@
     "react": "^17.0.1"
   },
   "peerDependencies": {
-    "react": "^17.0.0"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "eslintConfig": {
     "root": true,
