@@ -30,15 +30,15 @@
     "lint": "eslint \"{src,test}/**/*.js\""
   },
   "dependencies": {
-    "ackee-tracker": "^5.0.1"
+    "ackee-tracker": "^5.1.0"
   },
   "devDependencies": {
-    "@electerious/eslint-config": "^3.0.0",
+    "@electerious/eslint-config": "^4.1.0",
     "chai": "^4.3.0",
     "coveralls": "^3.1.1",
     "mocha": "^9.1.3",
     "nyc": "^15.1.0",
-    "react": "^17.0.1"
+    "react": "^18.3.1"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
