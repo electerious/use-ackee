@@ -1,5 +1,3 @@
-'use strict'
-
 const config = require('@electerious/eslint-config')
 
 module.exports = [
@@ -8,19 +6,10 @@ module.exports = [
     ignores: ['demos/**/*'],
   },
   {
-    files: ['**/*.js'],
     rules: {
-      'import-x/unambiguous': 'off',
-      'import-x/no-commonjs': 'off',
-      'unicorn/prefer-module': 'off',
-      'no-restricted-properties': [
-        'error',
-        {
-          object: 'assert',
-          property: 'strictEqual',
-          message: 'Use assert.equal instead',
-        },
-      ],
+      'import-x/unambiguous': 0,
+      'import-x/no-commonjs': 0,
+      'unicorn/prefer-module': 0,
     },
     languageOptions: {
       globals: {

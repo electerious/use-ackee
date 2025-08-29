@@ -29,7 +29,6 @@
     "prettier": "prettier --ignore-path .gitignore \"**/*.{js,json,md,yml}\"",
     "test": "npm run lint && node --test"
   },
-  "prettier": "@electerious/prettier-config",
   "dependencies": {
     "ackee-tracker": "^5.1.0"
   },
