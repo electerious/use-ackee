@@ -10,7 +10,6 @@ on:
 
 jobs:
   cancel:
-
     name: 'Cancel previous runs'
     runs-on: ubuntu-latest
     timeout-minutes: 2
@@ -21,7 +20,6 @@ jobs:
           access_token: ${{ github.token }}
 
   build:
-
     name: 'Build and test'
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
@@ -53,7 +51,6 @@ jobs:
           parallel: true
 
   coveralls:
-
     needs: build
     runs-on: ubuntu-latest
 
