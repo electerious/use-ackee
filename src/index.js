@@ -3,7 +3,7 @@
 const { useMemo, useEffect } = require('react')
 const ackeeTracker = require('ackee-tracker')
 
-const isBrowser = globalThis.window !== undefined
+const isBrowser = typeof window !== 'undefined'
 
 /**
  * Use Ackee in React.

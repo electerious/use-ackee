@@ -1,3 +1,5 @@
+'use strict'
+
 const config = require('@electerious/eslint-config')
 
 module.exports = [
@@ -9,6 +11,7 @@ module.exports = [
     rules: {
       'import-x/unambiguous': 0,
       'import-x/no-commonjs': 0,
+      'unicorn/prefer-global-this': 0,
       'unicorn/prefer-module': 0,
     },
     languageOptions: {
