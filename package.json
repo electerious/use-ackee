@@ -17,6 +17,7 @@
     "url": "https://github.com/electerious/use-ackee.git"
   },
   "license": "MIT",
+  "type": "module",
   "main": "src/index.js",
   "files": [
     "src"
@@ -33,7 +34,7 @@
     "ackee-tracker": "^5.1.0"
   },
   "devDependencies": {
-    "@electerious/eslint-config": "^5.1.0",
+    "@electerious/eslint-config": "^5.2.0",
     "@electerious/prettier-config": "^4.0.0",
     "chai": "^4.3.0",
     "coveralls": "^3.1.1",

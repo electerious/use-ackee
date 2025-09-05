@@ -1,7 +1,5 @@
-'use strict'
-
-const { useMemo, useEffect } = require('react')
-const ackeeTracker = require('ackee-tracker')
+import * as ackeeTracker from 'ackee-tracker'
+import { useEffect, useMemo } from 'react'
 
 const isBrowser = typeof window !== 'undefined'
 
@@ -44,5 +42,4 @@ const useAckee = function (pathname, environment, options = {}) {
   }, [instance, pathname, environment.domainId])
 }
 
-module.exports = useAckee
-module.exports.useAckee = useAckee
+export default useAckee

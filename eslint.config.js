@@ -1,9 +1,7 @@
-'use strict'
+import config from '@electerious/eslint-config/react'
 
-const config = require('@electerious/eslint-config')
-
-module.exports = [
-  ...config.default,
+export default [
+  ...config,
   {
     ignores: ['demos/**/*'],
   },

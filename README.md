@@ -1,6 +1,6 @@
 # use-ackee
 
-![Build](https://github.com/electerious/use-ackee/workflows/Build/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/electerious/use-ackee/badge.svg?branch=master)](https://coveralls.io/github/electerious/use-ackee?branch=master)
+![Build](https://github.com/electerious/use-ackee/workflows/Build/badge.svg)
 
 Use [Ackee](https://github.com/electerious/Ackee) in React.
 
@@ -10,15 +10,13 @@ Use [Ackee](https://github.com/electerious/Ackee) in React.
 npm install use-ackee
 ```
 
-_or_
-
-```
-yarn add use-ackee
-```
-
 ## Usage
 
 Import and call `use-ackee` in a component responsible for the routing or inside your routes. Make sure that only one `use-ackee` hook is actively rendered to avoid redundant records.
+
+```js
+import useAckee from 'use-ackee'
+```
 
 ```js
 useAckee(
@@ -43,9 +41,9 @@ This hook is a no-op on the server for safe usage during server-side rendering.
 
 ### Parameters
 
-- `pathname` `{?String}` Current path.
-- `environment` `{Object}` An object that contains details about your [Ackee](https://github.com/electerious/Ackee) installation. The `server` property must not end with a slash.
-- `opts` `{?Object}` An object of [Ackee options](https://github.com/electerious/ackee-tracker#options).
+- `pathname` `{?string}` Current path.
+- `environment` `{object}` An object that contains details about your [Ackee](https://github.com/electerious/Ackee) installation. The `server` property must not end with a slash.
+- `opts` `{?object}` An object of [Ackee options](https://github.com/electerious/ackee-tracker#options).
 
 ## Examples
 
