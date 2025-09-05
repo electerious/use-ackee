@@ -8,7 +8,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ### Changed
 
-- Requires Node.js 18 or newer
+- Requires React 17 or newer
+- Requires Node.js 20 or newer
 
 ## [3.1.0] - 2024-06-13
 
