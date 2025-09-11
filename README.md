@@ -1,6 +1,6 @@
 # use-ackee
 
-![Build](https://github.com/electerious/use-ackee/workflows/Build/badge.svg)
+[![Test](https://github.com/electerious/use-ackee/actions/workflows/test.yml/badge.svg)](https://github.com/electerious/use-ackee/actions/workflows/test.yml)
 
 Use [Ackee](https://github.com/electerious/Ackee) in React.
 
