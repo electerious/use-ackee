@@ -1,10 +1,7 @@
-'use strict'
+import assert from 'node:assert/strict'
+import test from 'node:test'
+import index from '../src/index.js'
 
-const assert = require('chai').assert
-const index = require('./../src/index.js')
-
-describe('index', function() {
-	it('should be a function', function() {
-		assert.isFunction(index)
-	})
+test('index should be a function', function () {
+  assert.equal(typeof index, 'function')
 })
