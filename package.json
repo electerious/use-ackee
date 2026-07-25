@@ -19,7 +19,7 @@
   "homepage": "https://github.com/electerious/use-ackee",
   "repository": {
     "type": "git",
-    "url": "https://github.com/electerious/use-ackee.git"
+    "url": "git+https://github.com/electerious/use-ackee.git"
   },
   "files": [
     "src"
