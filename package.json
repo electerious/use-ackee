@@ -1,11 +1,7 @@
 {
   "name": "use-ackee",
   "version": "3.1.0",
-  "authors": [
-    "Tobias Reich <tobias@electerious.com>"
-  ],
   "description": "Use Ackee in React",
-  "main": "src/index.js",
   "keywords": [
     "react",
     "hooks",
@@ -15,24 +11,31 @@
     "tracking",
     "ackee"
   ],
-  "license": "MIT",
   "homepage": "https://github.com/electerious/use-ackee",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/electerious/use-ackee.git"
   },
+  "license": "MIT",
+  "main": "src/index.js",
   "files": [
     "src"
   ],
   "scripts": {
-    "test": "npm run lint && node --experimental-test-coverage --test",
-    "lint": "eslint \"{src,test}/**/*.js\""
+    "eslint": "eslint \"**/*.{js,mjs}\"",
+    "format": "npm run eslint -- --fix && npm run prettier -- --write",
+    "lint": "npm run eslint && npm run prettier -- --check",
+    "prettier": "prettier --ignore-path .gitignore \"src/**/*.js\" \"test/**/*.js\" README.md CHANGELOG.md package.json \".github/**/*.yml\" eslint.config.mjs prettier.config.mjs",
+    "test": "npm run lint && node --experimental-test-coverage --test"
   },
   "dependencies": {
     "ackee-tracker": "^5.1.0"
   },
   "devDependencies": {
-    "@electerious/eslint-config": "^4.1.0",
+    "@electerious/eslint-config": "^6.0.0",
+    "@electerious/prettier-config": "^5.0.0",
+    "eslint": "^10.8.1",
+    "prettier": "^3.9.6",
     "react": "^18.3.1"
   },
   "peerDependencies": {
@@ -41,11 +44,7 @@
   "engines": {
     "node": ">=24.15.0"
   },
-  "eslintConfig": {
-    "root": true,
-    "extends": "@electerious/eslint-config"
-  },
-  "eslintIgnore": [
-    "demos"
+  "authors": [
+    "Tobias Reich <tobias@electerious.com>"
   ]
 }
