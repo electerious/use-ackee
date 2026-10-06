@@ -1,10 +1,12 @@
 # use-ackee
 
-![Build](https://github.com/electerious/use-ackee/workflows/Build/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/electerious/use-ackee/badge.svg?branch=master)](https://coveralls.io/github/electerious/use-ackee?branch=master)
+![Test](https://github.com/electerious/use-ackee/actions/workflows/test.yml/badge.svg)
 
 Use [Ackee](https://github.com/electerious/Ackee) in React.
 
 ## Install
+
+Requires Node.js 24.15.0 or newer.
 
 ```
 npm install use-ackee

@@ -1,10 +1,10 @@
 'use strict'
 
-const assert = require('chai').assert
-const index = require('./../src/index.js')
+const assert = require('node:assert/strict')
+const { test } = require('node:test')
+const useAckee = require('../src/index.js')
 
-describe('index', function() {
-	it('should be a function', function() {
-		assert.isFunction(index)
-	})
+test('exports useAckee as default and named export', () => {
+	assert.equal(typeof useAckee, 'function')
+	assert.equal(useAckee.useAckee, useAckee)
 })
